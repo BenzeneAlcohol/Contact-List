@@ -1,0 +1,61 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(120deg, #ff8474, #ffc996);
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+a { 
+    color: inherit; 
+} 
+header,form{
+    min-height: 20vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding:0.5rem;
+    font-size:1.5rem;
+    border:none;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+}
+
+.todo{
+    background-color: #ff8474;
+    margin:0.5rem;
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trash-btn{
+    background: #ff5200;
+    padding:0.5rem;
+    font-size:1.5rem;
+    border:0.5rem;
+    cursor:pointer;
+}

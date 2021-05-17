@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Just writing this is enough, no need to write exact directory and stuff -->
+</head>
+<body>
+    <header><h1>Contact List</h1></header>
+    <form action="/create-contact" method="POST">
+        <input type="text" name="name" placeholder="Enter name">
+        <input type="text" name="phone" placeholder="Enter Phone Number">
+        <button type="submit">Add contact</button>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">
+            <% for (let i of contact_list) {%>
+                <div class="todo">
+                    <li><%= i.name %></li>
+                    <li><%= i.phone %></li>
+                    <div id="delete" class="trash-btn">
+                        <a href="/delete-contact/<%=i.phone%>">Delete</a> 
+                        <!-- Here, we could also write /delete-contact/?phone=<%=i.phone%> if we wanted to go through the 2nd method -->
+                    </div>
+                </div>
+            <%}%>
+        </ul>
+    </div>
+</body>
+</html>
